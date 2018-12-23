@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid lightgray",
+      "display": "flex",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "padding": "10px",
+        "width": "25%",
+      }
+    }
+  >
+    <img
+      alt="profile avatar"
+      src="http://thecatapi.com/api/images/get?format=src&type=gif"
+      style={
+        Object {
+          "borderRadius": "100px",
+          "height": "70px",
+          "verticalAlign": "text-top",
+          "width": "70px",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "padding": "0px 10px",
+        }
+      }
+    >
+      <div>
+        Martha
+      </div>
+      <div>
+        Lawyer
+      </div>
+      <div>
+        28
+      </div>
+      <div>
+        New York
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "paddingLeft": "5px",
+        "paddingTop": "10px",
+      }
+    }
+  >
+    <div>
+      Height : 
+      173cm
+       cm
+    </div>
+    <div>
+      Compatibility Score : 
+      0.75
+    </div>
+    <div>
+      Contacts Exchanged : 
+      3
+    </div>
+    <div>
+      Religion : 
+      Atheist
+    </div>
+  </div>
+</div>
+`;

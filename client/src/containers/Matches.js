@@ -19,7 +19,7 @@ const booleanFilters = ['Photos', 'Contacts', 'Favourite'];
 class Matches extends Component {
 
     state = {
-        matches : [],
+        matches : undefined,
         compatibility:100,
         age : 95,
         height : 210
@@ -34,11 +34,10 @@ class Matches extends Component {
     componentDidMount() {
         fetchMatches().then(
             (res) => {
-                console.log(res)
                 this.setState({matches : res.data})
             },
             (err) => {
-                console.log(err);
+                console.error(err);
              }
             )
     }
@@ -48,11 +47,10 @@ class Matches extends Component {
                 this.setState({matches : res.data})
             },
             (err) => {
-                console.log(err);
+                console.error(err);
             } )
     }
     radioFilter(e) {
-      console.log(e.target.value);
         if(e.target.value === 'Yes') {
             filters[e.target.name.toLowerCase()] = true;
         } else if(e.target.value === "Reset") {
@@ -109,7 +107,7 @@ class Matches extends Component {
                </div>
                </div>
                 <div>
-                {
+                { !!matches &&
                  matches.length > 0 &&
                      matches.map((match,index) =>
                          <Match
@@ -118,6 +116,7 @@ class Matches extends Component {
 
 
                 }
+                    {!!matches && matches.length === 0 && <h1>Sorry, No data found for the given match!</h1>}
                 </div>
             </div>
         );
